@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Page</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div class="container" id="loggedInPage">
+        <button class="logout-btn" onclick="logout()">Logout</button>
+        <h2>Upload Files</h2>
+        <input type="file" id="fileInput" multiple>
+        <button id="uploadButton">Upload</button>
+        <table id="fileTable">
+            <thead>
+                <tr>
+                    <th>Sl. No.</th>
+                    <th>File Name</th>
+                    <th>Download</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="fileList" class="no-files">
+                <!-- File list will be populated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="app.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
